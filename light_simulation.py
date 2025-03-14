@@ -3,7 +3,7 @@ import paho.mqtt.client as mqtt
 BROKER = "test.mosquitto.org"
 TOPIC = "/student_group/light_control"
 
-def on_message(client, userdata, message):
+def on_message( message):
     payload = message.payload.decode()
     if payload == "ON":
         print("💡 Light is TURNED ON")
